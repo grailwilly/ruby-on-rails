@@ -19,7 +19,20 @@ class ArticlesController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
-  end
+
+    def 
+      @article = Article.find(params[:id])
+    end
+
+    def update
+      @article = Article.find(params[:id])
+
+      if @article.update
+        redirect @article
+      else
+        render :edit, status: :unprocessable_entity
+      end
+    end
 
   private
   def article_params
