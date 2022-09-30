@@ -7,3 +7,18 @@
     turbo_method: :delete,
     turbo_confirm: "Are you sure?"
 } %>
+
+<h2>Add Comment</h2>
+<%= form_with model: [ @article, @article.comments.build] do |f| %>
+  <p>
+    <%= f.label :commenter %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_field :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
