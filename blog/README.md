@@ -1,24 +1,15 @@
-# README
+# Learning Ruby on Rails 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Generate controller Articles and Comments
 
-Things you may want to cover:
+* Generate model Article (title, body) and Comment (commenter, body)
 
-* Ruby version
+* Add association, has_many :comments and belongs_to :article
 
-* System dependencies
+* Views index, show, new, and edit
 
-* Configuration
+* Add partial views
 
-* Database creation
+* Implement DRY, adding Concern for status and validation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Add basic authentication
