@@ -1,5 +1,5 @@
 <% @article.comments.each do |comment| %>
-  <% unless @articl.archived? %>
+  <% unless @article.archived? %>
     <p>
       <strong>Commenter:</strong>
       <%= comment.commenter %>
@@ -8,6 +8,15 @@
     <p>
       <strong>Comment:</strong>
       <%= comment.body %>
+    </p>
+
+    <p>
+      <%= link_to "Destroy comment", [comment.article, comment],
+        data: {
+          turbo_method: :delete,
+          turbo_confirm: "Are you sure?"
+        }
+      %>
     </p>
   <% end %>
 <% end %>
