@@ -14,6 +14,10 @@
     <% end %>
   </div>
   <div>
+      <%= f.label :status %><br>
+      <%= f.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+  </div>
+  <div>
     <%= f.submit %>
   </div>
 <% end %>

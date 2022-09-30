@@ -3,9 +3,11 @@ module Visible
 
   VALID_STATUSES = ['public', 'private', 'archived']
 
-  validates :status, inclusion: { in: VALID_STATUSES }
+  included do
+    validates :status, inclusion: { in: VALID_STATUSES }
+  end
 
-  class_method do
+  class_methods do
     def public_count
       where(status: 'public').count
     end
