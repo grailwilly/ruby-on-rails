@@ -1,4 +1,4 @@
-class BandSerializer
-  include FastJsonapi::ObjectSerializer
+class BandSerializer < ActiveModel::Serializer
   attributes :id, :name
+  has_many :members
 end

@@ -1,22 +1,22 @@
-class BandsController < ApplicationController
+class Api::V1::BandsController < ApplicationController
   before_action :set_band, only: %i[ show update destroy ]
 
   # GET /bands
   def index
     @bands = Band.all
-
+    render json: @bands
     # render json: @bands, adapter: :json, each_serializer: BandSerializer
     # render json: {:band => BandSerializer.new(@band).to_h}
     # render json: @bands, each_serializer: BandSerializer
-    json_string = BandSerializer.new(@bands).serializable_hash
-    render json: json_string
+    # json_string = BandSerializer.new(@bands).serializable_hash
+    # render json: json_string.include(:members)
   end
 
   # GET /bands/1
   def show
-    # render json: @band
-    json_string = BandSerializer.new(@band)
-    render json: json_string.serializable_hash
+    render json: @band
+    # json_string = BandSerializer.new(@band)
+    # render json: json_string.serializable_hash
   end
 
   # POST /bands
