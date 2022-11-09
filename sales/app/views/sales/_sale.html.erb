@@ -1,17 +1,14 @@
-<div id="<%= dom_id sale %>">
-  <p>
-    <strong>Name:</strong>
-    <%= sale.name %>
-  </p>
-
-  <p>
-    <strong>Total:</strong>
-    <%= sale.total %>
-  </p>
-
-  <!-- <p>
-    <strong>User:</strong>
-    <%#= sale.user_id %>
-  </p> -->
-
-</div>
+<table class="table">
+  <thead class="thead=dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= sale.name %></td>
+      <td><%= sale.total %></td>
+    </tr>
+  </tbody>
+</table>

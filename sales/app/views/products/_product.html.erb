@@ -1,22 +1,16 @@
-<div id="<%= dom_id product %>">
-  <p>
-    <strong>Code:</strong>
-    <%= product.code %>
-  </p>
-
-  <p>
-    <strong>Name:</strong>
-    <%= product.name %>
-  </p>
-
-  <p>
-    <strong>Price:</strong>
-    <%= product.price %>
-  </p>
-
-  <!-- <p>
-    <strong>User:</strong>
-    <%#= product.user_id %>
-  </p> -->
-
-</div>
+<table class="table">
+  <thead class="thead=dark">
+    <tr>
+      <th scope="col">Code</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= product.code %></td>
+      <td><%= product.name %></td>
+      <td><%= product.price %></td>
+    </tr>
+  </tbody>
+</table>
